@@ -1,5 +1,5 @@
 resource "aws_instance" "tejal" {
-  ami                    = ami-0abcdef1234567890
+  ami                    = "ami-0abcdef1234567890"   # wrap AMI in quotes
   instance_type          = var.instance_type
   key_name               = var.key_name
   vpc_security_group_ids = [aws_security_group.ec2_security_group.id]
@@ -8,6 +8,7 @@ resource "aws_instance" "tejal" {
     Name = "tj-EC2"
   }
 }
+
 
 resource "aws_security_group" "ec2_security_group" {
   name        = "ec2 security group"
