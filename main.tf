@@ -1,5 +1,5 @@
 resource "aws_instance" "tejal" {
-  ami                    = var.ami_id
+  ami                    = ami-0abcdef1234567890
   instance_type          = var.instance_type
   key_name               = var.key_name
   vpc_security_group_ids = [aws_security_group.ec2_security_group.id]
